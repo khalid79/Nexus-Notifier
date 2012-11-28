@@ -10,7 +10,8 @@
 
   "content_scripts": [
     {
-      "matches": ["http://*/*"]
+      "matches": ["http://*/*"],
+      "js": ["nexus.js"]
     }
   ],
 
