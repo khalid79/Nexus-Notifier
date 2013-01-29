@@ -30,9 +30,9 @@ function ajaxNexus(nexusModel){
 		url: deviceURL,
 		success: function(response) {
 			var $response = $(response);
-			var soldOut = $response.find('.hardware-sold-out');
+			var inStock = $response.find('#buy-hardware-button');
 			var availability = null;
-			if( soldOut.length != 0 ) {
+			if( inStock.length == 0 ) {
 				availability = 'Not available'; 
 				backgroundImage = 'not-available';
 			}else{
